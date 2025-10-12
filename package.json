@@ -9,9 +9,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Autotest for redmine.org written on playwright",
   "devDependencies": {
     "@playwright/test": "^1.55.1",
     "@types/node": "^24.5.2"
+  },
+  "dependencies": {
+    "typescript": "^5.9.3"
   }
 }
