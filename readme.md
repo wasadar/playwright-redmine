@@ -9,7 +9,7 @@ Playwright tests Automated Tests for https://www.redmine.org/ with Playwright. S
 4. [Usage](#usage)
 
 ## Summary
-This repository contains automated tests for https://www.redmine.org/ using the Playwright framework. The test results are reported using Allure reporting.
+This repository contains automated tests for https://www.redmine.org/ using the Playwright framework. The test results are reported using html reporter.
 
 ## Requirements
 - Node.js
