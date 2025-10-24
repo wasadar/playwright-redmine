@@ -12,9 +12,9 @@ test.describe('Redmine tests', () => {
   });
 
   test('Guide link', async ({ page }) => {
-    await expect(page).toHaveTitle(/Overview - Redmine/);
+    await expect(page).toHaveTitle('Overview - Redmine');
     await mainPage.clickOnGuideLink();
-    await expect(page).toHaveTitle(/Guide - Redmine/);
+    await expect(page).toHaveTitle('Guide - Redmine');
   });
   
   test('Changing tabs', async ({ page, baseURL }) => {
@@ -39,16 +39,16 @@ test.describe('Redmine tests', () => {
     await expect(page).toHaveURL(`${baseURL}${endpoints.repository}`);
   });
   
-  test('Changing issues per page', async ({ page }) => {
+  // the correspoding functional was deleted from redmine.org so test is now not working
+  test.skip('Changing issues per page', async ({ page }) => {
     await mainPage.clickOnIssuesLink();
     await expect(await mainPage.getTableRows()).toHaveCount(25);
-    // the correspoding functional was deleted from redmine.org so test is now not working
-    // await mainPage.clickOnPerPageButton(50);
-    // await expect(await mainPage.getTableRows()).toHaveCount(50);
-    // await mainPage.clickOnPerPageButton(100);
-    // await expect(await mainPage.getTableRows()).toHaveCount(100);
-    // await mainPage.clickOnPerPageButton(25);
-    // await expect(await mainPage.getTableRows()).toHaveCount(25);
+    await mainPage.clickOnPerPageButton(50);
+    await expect(await mainPage.getTableRows()).toHaveCount(50);
+    await mainPage.clickOnPerPageButton(100);
+    await expect(await mainPage.getTableRows()).toHaveCount(100);
+    await mainPage.clickOnPerPageButton(25);
+    await expect(await mainPage.getTableRows()).toHaveCount(25);
   });
   
   test('Sorting versions status table', async ({ page }) => {

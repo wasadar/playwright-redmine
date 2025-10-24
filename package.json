@@ -15,6 +15,7 @@
     "@types/node": "^24.5.2"
   },
   "dependencies": {
+    "@executeautomation/playwright-mcp-server": "^1.0.6",
     "typescript": "^5.9.3"
   }
 }

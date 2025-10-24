@@ -1,0 +1,31 @@
+---
+alwaysApply: true
+---
+
+# Coding Guidelines for Playwright-MCP Project
+
+## 1. File Interaction
+- Always interact only with files located in the `.` folder.
+- Do not read or modify files outside this folder.
+- Do not modify files outside `ai-generated` folders.
+
+## 2. Page Object Model (POM)
+- Always use the **Page Object Model (POM)** pattern for structuring UI automation code.
+- Store all page object files in:  `pages\ai-generated`
+
+## 3. Spec Files
+- Always create spec/test files in:  `tests\ai-generated`
+- Do not place spec files outside this folder.
+
+## 4. MCP Usage
+- When interacting with code, always use **playwright-mcp** for all test execution and automation tasks.
+- Ensure any automation scripts leverage MCP commands for consistency and logging.
+
+## 5. Prevent Auto-Generated / Random Spec Files
+- Do not allow LLM or MCP to create random spec files like `urltest_<uuid>.spec`.
+- Ensure AI-generated spec files are only created in `tests\ai-generated`.
+
+## 6. General Notes
+- Follow consistent naming conventions for pages and specs.
+- Keep code modular and reusable within the defined folder structure.
+- Review MCP logs to debug test execution if necessary.
